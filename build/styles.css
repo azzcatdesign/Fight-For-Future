@@ -1,0 +1,116 @@
+/** HELPERS
+  Helper files to extend or toss into Inspector 
+*/
+/* line 6, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.debug {
+  border: 1px solid red; }
+
+/* line 11, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.debugB {
+  border: 1px dotted blue; }
+
+/* line 16, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.debugG {
+  border: 1px dotted green; }
+
+/* line 21, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.debugO {
+  border: 1px dashed orange; }
+
+/* line 26, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.debugP {
+  border: 1px dashed purple; }
+
+/* line 31, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.debugY {
+  border: 1px solid yellow; }
+
+/* line 37, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.left {
+  float: left; }
+
+/* line 42, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.right {
+  float: right; }
+
+/* line 48, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.circle {
+  border-radius: 50%; }
+
+/* line 59, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.no-list-style {
+  list-style: none; }
+
+/* line 65, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.tac {
+  text-align: center; }
+
+/* line 70, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.tal {
+  text-align: left; }
+
+/* line 75, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.tar {
+  text-align: right; }
+
+/* line 82, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden; }
+
+/* line 89, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.ib {
+  display: inline-block; }
+
+/* line 94, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.no-underline {
+  text-decoration: none; }
+
+/* line 99, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.place-holder {
+  border: 1px solid transparent; }
+
+/* line 104, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.rcaps {
+  text-transform: capitalize; }
+
+/* line 109, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.s-caps {
+  font-variant: small-caps; }
+
+/* line 114, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+
+.uc {
+  text-transform: uppercase; }
+
+/** ASPECT RATIO
+  If you want a consistent look across different screen sizes you will find this aspect ratio mixin useful. It maintains the aspect ratio at any screen size. To use this mixin, you need two HTML elements: an outer and an inner one. The mixin calculates the aspect ratio of the two elements and maintains that at any resolution.
+*/
+/** FULL WIDTH
+  Break out of parent container
+*/
+/** CLEARFIX MIXIN FOR @INCLUDE
+  */
+/** CLEARFIX PLACEHOLDER FOR @EXTEND
+  */
+/*# sourceMappingURL=styles.css.map */
