@@ -34,6 +34,7 @@
   "private": true,
   "dependencies": {
     "normalize-css": "^8.0.0",
-    "plumber-sass": "^0.7.7"
+    "plumber-sass": "^0.7.7",
+    "FitText.js": "^1.2.0"
   }
 }

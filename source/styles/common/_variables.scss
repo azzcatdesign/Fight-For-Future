@@ -1,0 +1,18 @@
+/** Colors */
+$red: #e74c3c;
+
+/** Fonts  */
+// @import url("https://use.typekit.net/gww4crl.css");
+// In case we want to speed things up, and use a system font for text.
+// See https://css-tricks.com/snippets/css/system-font-stack/
+$system-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$family-sans-serif: "nimbus-sans", $system-font;
+$family-cond-sans-serif: "nimbus-sans-condensed", $system-font;
+
+$body-font: $family-sans-serif;
+$header-font: $family-cond-sans-serif;
+
+// See https://jamonserrano.github.io/plumber-sass/baselines/
+// for baseline ratios.
+$body-baseline: 0.333; // This ratio explicit to Nimbus Sans.

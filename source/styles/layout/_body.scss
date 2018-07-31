@@ -1,0 +1,43 @@
+.main {
+  background: $percent_10;
+  color: $white;
+  padding: 2rem 2rem 4rem;
+  .container {
+    margin: 0 auto;
+    max-width: 100rem;     
+  }
+  h2 {
+    @extend %tac;
+  }
+}
+
+.cta {
+  margin: 4rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.message {
+  @extend %clearfix;
+  background: transparent url('../images/target_white.svg;') no-repeat center center;
+  padding: 4rem 0 2rem;
+  position: relative;
+  &:after {
+    content: "";
+    background: transparent url('../images/stock-vector-teenagers-silhouettes-vector-470051303.jpg;') no-repeat center center;
+    background-size: cover;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+  }
+  h2 {
+    @extend %tac;
+    color: $black;
+    margin: 0 auto;
+  }
+}

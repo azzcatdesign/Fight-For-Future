@@ -1,0 +1,17 @@
+.footer {
+  background: $black;
+  color: $percent_40;
+  margin: 0 auto;
+  padding: 4rem;
+  p {
+    @extend %tac;
+    a {
+      color: $percent_60;
+      &:active,
+      &:focus,
+      &:hover {
+        color: $percent_80;
+      }
+    }
+  } 
+}
