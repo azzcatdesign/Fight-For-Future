@@ -9,6 +9,20 @@
   h2 {
     @extend %tac;
   }
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    @include for-tablet-landscape-up {
+      text-align: center;
+    }
+    li {
+      background: $red;
+      display: inline-block;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding: .5rem 1rem;
+    }
+  }
 }
 
 .cta {
@@ -20,11 +34,20 @@
 .message {
   @extend %clearfix;
   background: transparent url('../images/target_white.svg;') no-repeat center center;
-  padding: 4rem 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
+  height: 70vw;
+  @include for-tablet-landscape-up {
+    height: 50vw; 
+  }
+  @include for-desktop-up {
+    height: 40vw;
+  }
   &:after {
     content: "";
-    background: transparent url('../images/stock-vector-teenagers-silhouettes-vector-470051303.jpg;') no-repeat center center;
+    background: transparent url('../images/stock-vector-teenagers-silhouettes-vector-470051303.jpg;') no-repeat top center;
     background-size: cover;
     display: block;
     top: 0;
@@ -35,9 +58,17 @@
     z-index: -1;
     opacity: 0.5;
   }
+  >div {
+    width: 80vw;
+    .cta {
+      margin-bottom: 0;
+    }
+  }
   h2 {
     @extend %tac;
     color: $black;
+    font-size: calc(48px + (72 - 48) * ((100vw - 300px) / (1000 - 300)));
+    line-height: .9;
     margin: 0 auto;
   }
 }

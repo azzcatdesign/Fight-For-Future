@@ -4,6 +4,10 @@
   margin: 0 auto;
   padding: 4rem;
   p {
+    @include scale-small;
+  }
+  p,
+  h6 {
     @extend %tac;
     a {
       color: $percent_60;

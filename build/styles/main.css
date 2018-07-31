@@ -52,7 +52,8 @@
   list-style: none; }
 
 /* line 65, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
-.btn, .hero__header h1.fit-text, .main h2, .message h2, .footer p,
+.btn, .hero__header h1.grow, .main h2, .message h2, .footer p,
+.footer h6,
 .tac {
   text-align: center; }
 
@@ -99,7 +100,7 @@
   font-variant: small-caps; }
 
 /* line 114, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
-.btn, .hero__header h1.fit-text,
+.btn, .hero__header h1.grow,
 .uc {
   text-transform: uppercase; }
 
@@ -495,26 +496,6 @@ body {
   padding-bottom: 0.87575rem;
   margin-bottom: 1rem; }
 
-/* line 148, Users/catherineazzarello/Sites/fight_for_future/source/styles/common/_typography.scss */
-h2,
-.h2 {
-  font-size: 4.738rem;
-  line-height: 6rem;
-  margin-top: 1rem;
-  padding-top: 0.208754rem;
-  padding-bottom: 0.791246rem;
-  margin-bottom: 1rem; }
-  @media (min-width: 900px) {
-    /* line 148, Users/catherineazzarello/Sites/fight_for_future/source/styles/common/_typography.scss */
-    h2,
-    .h2 {
-      font-size: 5.9225rem;
-      line-height: 8rem;
-      margin-top: 1rem;
-      padding-top: 0.0109425rem;
-      padding-bottom: 0.9890575rem;
-      margin-bottom: 1rem; } }
-
 /* line 154, Users/catherineazzarello/Sites/fight_for_future/source/styles/common/_typography.scss */
 h3,
 .h3 {
@@ -633,32 +614,31 @@ h6,
 
 /* line 26, Users/catherineazzarello/Sites/fight_for_future/source/styles/components/_buttons.scss */
 .btn-red {
-  background: #e74c3c; }
+  background: #d60000; }
   /* line 3, Users/catherineazzarello/Sites/fight_for_future/source/styles/components/_buttons.scss */
   .btn-red:hover {
-    background: #df2e1b;
+    background: #ad0000;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
   /* line 7, Users/catherineazzarello/Sites/fight_for_future/source/styles/components/_buttons.scss */
   .btn-red:active {
-    background: #921e12; }
+    background: #570000; }
 
 /* line 1, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
 .hero__header {
   background: #212121 url("../images/target_gray.svg;") no-repeat center center;
-  border-top: 6rem solid #e74c3c;
-  border-bottom: 6rem solid #e74c3c; }
+  border-top: 6rem solid #d60000;
+  border-bottom: 6rem solid #d60000; }
   /* line 6, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
-  .hero__header h1.fit-text {
+  .hero__header h1.grow {
     color: #fff;
     font-family: "nimbus-sans-condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 15rem;
+    font-size: calc(96px + (200 - 96) * ((100vw - 300px) / (1000 - 300)));
     font-weight: 900;
     letter-spacing: 1px;
-    line-height: .4;
-    margin: 4rem 0; }
-    /* line 16, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
-    .hero__header h1.fit-text span {
+    line-height: .4; }
+    /* line 15, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
+    .hero__header h1.grow span {
       display: block; }
 
 /* line 1, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
@@ -670,8 +650,23 @@ h6,
   .main .container {
     margin: 0 auto;
     max-width: 100rem; }
+  /* line 12, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+  .main ul {
+    list-style-type: none;
+    padding-left: 0; }
+    @media (min-width: 900px) {
+      /* line 12, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+      .main ul {
+        text-align: center; } }
+    /* line 18, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+    .main ul li {
+      background: #d60000;
+      display: inline-block;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding: .5rem 1rem; }
 
-/* line 14, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+/* line 28, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
 .cta {
   margin: 4rem auto;
   display: -webkit-box;
@@ -681,15 +676,32 @@ h6,
       -ms-flex-pack: center;
           justify-content: center; }
 
-/* line 20, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+/* line 34, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
 .message {
   background: transparent url("../images/target_white.svg;") no-repeat center center;
-  padding: 4rem 0 2rem;
-  position: relative; }
-  /* line 25, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  height: 70vw; }
+  @media (min-width: 900px) {
+    /* line 34, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+    .message {
+      height: 50vw; } }
+  @media (min-width: 1200px) {
+    /* line 34, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+    .message {
+      height: 40vw; } }
+  /* line 48, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
   .message:after {
     content: "";
-    background: transparent url("../images/stock-vector-teenagers-silhouettes-vector-470051303.jpg;") no-repeat center center;
+    background: transparent url("../images/stock-vector-teenagers-silhouettes-vector-470051303.jpg;") no-repeat top center;
     background-size: cover;
     display: block;
     top: 0;
@@ -699,9 +711,17 @@ h6,
     position: absolute;
     z-index: -1;
     opacity: 0.5; }
-  /* line 38, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+  /* line 61, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+  .message > div {
+    width: 80vw; }
+    /* line 63, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+    .message > div .cta {
+      margin-bottom: 0; }
+  /* line 67, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
   .message h2 {
     color: #000;
+    font-size: calc(48px + (72 - 48) * ((100vw - 300px) / (1000 - 300)));
+    line-height: .9;
     margin: 0 auto; }
 
 /* line 1, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_footer.scss */
@@ -710,10 +730,31 @@ h6,
   color: #797979;
   margin: 0 auto;
   padding: 4rem; }
-  /* line 8, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_footer.scss */
-  .footer p a {
+  /* line 6, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_footer.scss */
+  .footer p {
+    font-size: 1.75rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+    padding-top: 0.20775rem;
+    padding-bottom: 0.79225rem;
+    margin-bottom: 1rem; }
+    @media (min-width: 900px) {
+      /* line 6, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_footer.scss */
+      .footer p {
+        font-size: 2.1875rem;
+        line-height: 3rem;
+        margin-top: 1rem;
+        padding-top: 0.1346875rem;
+        padding-bottom: 0.8653125rem;
+        margin-bottom: 1rem; } }
+  /* line 12, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_footer.scss */
+  .footer p a,
+  .footer h6 a {
     color: #aaaaaa; }
-    /* line 10, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_footer.scss */
-    .footer p a:active, .footer p a:focus, .footer p a:hover {
+    /* line 14, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_footer.scss */
+    .footer p a:active, .footer p a:focus, .footer p a:hover,
+    .footer h6 a:active,
+    .footer h6 a:focus,
+    .footer h6 a:hover {
       color: #d6d6d6; }
 /*# sourceMappingURL=main.css.map */

@@ -3,16 +3,15 @@
   border-top: 6rem solid $red;
   border-bottom: 6rem solid $red;
   // No Plumber for this section.
-  h1.fit-text {
+  h1.grow {
     @extend %tac;
     @extend %uc;
     color: $white;        
     font-family: $header-font;
-    font-size: 15rem;
+    font-size: calc(96px + (200 - 96) * ((100vw - 300px) / (1000 - 300)));
     font-weight: 900;
     letter-spacing: 1px;
     line-height: .4;
-    margin: 4rem 0;
     span {
       display: block;
     }
