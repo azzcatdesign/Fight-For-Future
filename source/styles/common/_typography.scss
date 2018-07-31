@@ -5,9 +5,12 @@
 
 :root {
   font-size: 8px;  // grid height => 8px, font size => 16px
+
   // Push underlines to below descenders.
   // Not yet supported in all browsers, but
-  // a nicety where available. 
+  // a nicety where available.
+  text-underline-position: under; 
+
   // Uncomment to show the grid
   // background-image: linear-gradient(to top, rgba(242, 201, 76, 0.25) 0, rgba(242, 201, 76, 0.25) 1px, transparent 1px);
   background-size: 100% 8px;
@@ -139,34 +142,29 @@ body {
   }
 }
 
-h1,
+h1:not(.grow),
 .h1 {
-  //@include scale-h1;
-  //color: $header-font-color;
+  @include scale-h1;
 }
 
 h2,
 .h2 {
-  //@include scale-h2;
-  //color: $header-font-color;
+  @include scale-h2;
 }
 
 h3,
 .h3 {
   @include scale-h3;
-  //color: $header-font-color;
 }
 
 h4,
 .h4 {
   @include scale-h4;
-  //color: $header-font-color;
 }
 
 h5,
 .h5 {
   @include scale-p;
-  //color: $header-font-color;  
 }
 
 p,
@@ -178,7 +176,6 @@ ul li {
 h6,
 .h6 {
   @include scale-small;
-  //color: $header-font-color;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
