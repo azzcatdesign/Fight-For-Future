@@ -33,7 +33,7 @@
 
 .message {
   @extend %clearfix;
-  background: transparent url('../images/target_white.svg;') no-repeat center center;
+  background: transparent url('../images/target_white.svg') no-repeat center center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,7 +47,7 @@
   }
   &:after {
     content: "";
-    background: transparent url('../images/stock-vector-teenagers-silhouettes-vector-470051303.jpg;') no-repeat top center;
+    background: transparent url('../images/stock-vector-teenagers-silhouettes-vector-470051303.jpg') no-repeat top center;
     background-size: cover;
     display: block;
     top: 0;

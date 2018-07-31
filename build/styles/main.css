@@ -626,7 +626,7 @@ h6,
 
 /* line 1, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
 .hero__header {
-  background: #212121 url("../images/target_gray.svg;") no-repeat center center;
+  background: #212121 url("../images/target_gray.svg") no-repeat center center;
   border-top: 6rem solid #d60000;
   border-bottom: 6rem solid #d60000; }
   /* line 6, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
@@ -678,7 +678,7 @@ h6,
 
 /* line 34, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
 .message {
-  background: transparent url("../images/target_white.svg;") no-repeat center center;
+  background: transparent url("../images/target_white.svg") no-repeat center center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -701,7 +701,7 @@ h6,
   /* line 48, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
   .message:after {
     content: "";
-    background: transparent url("../images/stock-vector-teenagers-silhouettes-vector-470051303.jpg;") no-repeat top center;
+    background: transparent url("../images/stock-vector-teenagers-silhouettes-vector-470051303.jpg") no-repeat top center;
     background-size: cover;
     display: block;
     top: 0;
