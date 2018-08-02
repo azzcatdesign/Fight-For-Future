@@ -35,5 +35,8 @@
   "devDependencies": {
     "normalize-css": "^8.0.0",
     "plumber-sass": "^0.7.7"
+  },
+  "dependencies": {
+    "aos": "^2.3.3"
   }
 }
