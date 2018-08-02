@@ -47,7 +47,10 @@
   }
   &:after {
     content: "";
-    background: transparent url('../images/stock-vector-teenagers-silhouettes-vector-470051303.jpg') no-repeat top center;
+    // background: transparent url('../images/stock-vector-teenagers-silhouettes-vector-470051303.jpg') no-repeat top center;
+    background: $percent_60 url('../images/teens.svg');
+    background-repeat: no-repeat;
+    background-position: left 2rem;
     background-size: cover;
     display: block;
     top: 0;
@@ -56,7 +59,7 @@
     right: 0;
     position: absolute;
     z-index: -1;
-    opacity: 0.5;
+    opacity: 0.45;
   }
   >div {
     width: 80vw;

@@ -742,7 +742,9 @@ h6,
   /* line 48, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
   .message:after {
     content: "";
-    background: transparent url("../images/stock-vector-teenagers-silhouettes-vector-470051303.jpg") no-repeat top center;
+    background: #aaaaaa url("../images/teens.svg");
+    background-repeat: no-repeat;
+    background-position: left 2rem;
     background-size: cover;
     display: block;
     top: 0;
@@ -751,14 +753,14 @@ h6,
     right: 0;
     position: absolute;
     z-index: -1;
-    opacity: 0.5; }
-  /* line 61, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+    opacity: 0.45; }
+  /* line 64, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
   .message > div {
     width: 80vw; }
-    /* line 63, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+    /* line 66, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
     .message > div .cta {
       margin-bottom: 0; }
-  /* line 67, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+  /* line 70, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
   .message h2 {
     color: #000;
     font-size: calc(48px + (72 - 48) * ((100vw - 300px) / (1000 - 300)));
