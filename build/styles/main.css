@@ -1,3 +1,71 @@
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
+
+@media print {
+  /* line 44, Users/catherineazzarello/Desktop/ azzcat_sass/_breakpoints.scss */
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  /* line 54, Users/catherineazzarello/Desktop/ azzcat_sass/_breakpoints.scss */
+  a,
+  a:visited {
+    text-decoration: underline; }
+  /* line 59, Users/catherineazzarello/Desktop/ azzcat_sass/_breakpoints.scss */
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  /* line 63, Users/catherineazzarello/Desktop/ azzcat_sass/_breakpoints.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  /* line 72, Users/catherineazzarello/Desktop/ azzcat_sass/_breakpoints.scss */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+  /* line 77, Users/catherineazzarello/Desktop/ azzcat_sass/_breakpoints.scss */
+  pre {
+    white-space: pre-wrap !important; }
+  /* line 80, Users/catherineazzarello/Desktop/ azzcat_sass/_breakpoints.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  /* line 91, Users/catherineazzarello/Desktop/ azzcat_sass/_breakpoints.scss */
+  thead {
+    display: table-header-group; }
+  /* line 95, Users/catherineazzarello/Desktop/ azzcat_sass/_breakpoints.scss */
+  tr,
+  img {
+    page-break-inside: avoid; }
+  /* line 100, Users/catherineazzarello/Desktop/ azzcat_sass/_breakpoints.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  /* line 107, Users/catherineazzarello/Desktop/ azzcat_sass/_breakpoints.scss */
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+
+/** Colors */
 /** HELPERS
   Helper files to extend or toss into Inspector 
 */
@@ -100,9 +168,60 @@
   font-variant: small-caps; }
 
 /* line 114, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
-.btn, h1.grow,
+.btn, a.link--nav, h1.grow,
 .uc {
   text-transform: uppercase; }
+
+/*
+ * Hide visually and from screen readers
+ */
+/* line 123, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+.hidden {
+  display: none !important; }
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+/* line 136, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  /* 1 */ }
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+/* line 154, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit; }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+/* line 169, Users/catherineazzarello/Desktop/ azzcat_sass/_helpers.scss */
+.invisible {
+  visibility: hidden; }
 
 /** ASPECT RATIO
   If you want a consistent look across different screen sizes you will find this aspect ratio mixin useful. It maintains the aspect ratio at any screen size. To use this mixin, you need two HTML elements: an outer and an inner one. The mixin calculates the aspect ratio of the two elements and maintains that at any resolution.
@@ -1794,7 +1913,7 @@ h6,
 /* line 12, Users/catherineazzarello/Sites/fight_for_future/source/styles/components/_buttons.scss */
 .btn {
   border-radius: .5rem;
-  color: #fff;
+  color: white;
   font-family: "nimbus-sans-condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 900;
   font-size: 2em;
@@ -1816,19 +1935,53 @@ h6,
     background: #570000; }
 
 /* line 1, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
-.hero__header {
-  background: #212121 url("../images/target_gray.svg") no-repeat center center;
-  border-top: 6rem solid #d60000;
-  border-bottom: 6rem solid #d60000; }
+nav {
+  background: #1a1919; }
+  /* line 3, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  /* line 10, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
+  nav li {
+    line-height: 1;
+    margin: 0;
+    padding: 0 2rem; }
+    @media (min-width: 900px) {
+      /* line 10, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
+      nav li {
+        line-height: 1;
+        margin-top: 0; } }
 
-/* line 7, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
-.hero__header--2 {
-  background: #212121;
+/* line 22, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
+a.link--nav {
+  color: #999999;
+  display: block;
+  letter-spacing: 1px;
+  padding: 1.5rem 1rem 1rem;
+  text-decoration: none; }
+  /* line 29, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
+  a.link--nav:visited {
+    color: #cccccc; }
+  /* line 32, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
+  a.link--nav:active, a.link--nav:focus, a.link--nav:hover {
+    background: #d60000;
+    color: white; }
+
+/* line 40, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
+.hero__header {
+  background: #1a1919;
   border-top: 6rem solid #d60000;
   border-bottom: 6rem solid #d60000;
   position: relative; }
-  /* line 12, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
-  .hero__header--2 .target {
+  /* line 45, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
+  .hero__header .target {
     display: block;
     position: absolute;
     top: 0;
@@ -1836,18 +1989,11 @@ h6,
     width: 100%;
     height: 100%;
     background: transparent url("../images/target_gray.svg") no-repeat center center;
-    background-size: contain;
-    /*
-    &:hover {
-      opacity: 1;
-      transform: scale(2) translateX(200%) translateY(50%);
-      
-    }
-*/ }
+    background-size: contain; }
 
-/* line 40, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
+/* line 58, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
 h1.grow {
-  color: #fff;
+  color: white;
   font-family: "nimbus-sans-condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: calc(96px + (200 - 96) * ((100vw - 300px) / (1000 - 300)));
   font-weight: 900;
@@ -1855,28 +2001,32 @@ h1.grow {
   line-height: .4;
   z-index: 2;
   position: relative; }
-  /* line 51, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
+  /* line 69, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_header.scss */
   h1.grow span {
     display: block; }
 
 /* line 1, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+body {
+  margin-top: 0; }
+
+/* line 4, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
 .main {
-  background: #212121;
-  color: #fff;
+  background: #1a1919;
+  color: white;
   padding: 2rem 2rem 4rem; }
-  /* line 5, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+  /* line 8, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
   .main .container {
     margin: 0 auto;
     max-width: 100rem; }
-  /* line 12, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+  /* line 15, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
   .main ul {
     list-style-type: none;
     padding-left: 0; }
     @media (min-width: 900px) {
-      /* line 12, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+      /* line 15, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
       .main ul {
         text-align: center; } }
-    /* line 18, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+    /* line 21, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
     .main ul li {
       background: #d60000;
       display: inline-block;
@@ -1884,7 +2034,7 @@ h1.grow {
       margin-right: 1rem;
       padding: .5rem 1rem; }
 
-/* line 28, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+/* line 31, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
 .cta {
   margin: 4rem auto;
   display: -webkit-box;
@@ -1894,7 +2044,7 @@ h1.grow {
       -ms-flex-pack: center;
           justify-content: center; }
 
-/* line 34, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+/* line 37, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
 .message {
   background: transparent url("../images/target_white.svg") no-repeat center center;
   display: -webkit-box;
@@ -1909,17 +2059,17 @@ h1.grow {
   position: relative;
   height: 70vw; }
   @media (min-width: 900px) {
-    /* line 34, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+    /* line 37, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
     .message {
       height: 50vw; } }
   @media (min-width: 1200px) {
-    /* line 34, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+    /* line 37, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
     .message {
       height: 40vw; } }
-  /* line 48, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+  /* line 51, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
   .message:after {
     content: "";
-    background: #aaaaaa url("../images/teens.svg");
+    background: #999999 url("../images/teens.svg");
     background-repeat: no-repeat;
     background-position: left 2rem;
     background-size: cover;
@@ -1931,23 +2081,23 @@ h1.grow {
     position: absolute;
     z-index: -1;
     opacity: 0.45; }
-  /* line 64, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+  /* line 67, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
   .message > div {
     width: 80vw; }
-    /* line 66, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+    /* line 69, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
     .message > div .cta {
       margin-bottom: 0; }
-  /* line 70, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
+  /* line 73, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_body.scss */
   .message h2 {
-    color: #000;
+    color: black;
     font-size: calc(48px + (72 - 48) * ((100vw - 300px) / (1000 - 300)));
     line-height: .9;
     margin: 0 auto; }
 
 /* line 1, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_footer.scss */
 .footer {
-  background: #000;
-  color: #797979;
+  background: black;
+  color: #666666;
   margin: 0 auto;
   padding: 4rem; }
   /* line 6, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_footer.scss */
@@ -1970,11 +2120,11 @@ h1.grow {
   /* line 12, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_footer.scss */
   .footer p a,
   .footer h6 a {
-    color: #aaaaaa; }
+    color: #999999; }
     /* line 14, Users/catherineazzarello/Sites/fight_for_future/source/styles/layout/_footer.scss */
     .footer p a:active, .footer p a:focus, .footer p a:hover,
     .footer h6 a:active,
     .footer h6 a:focus,
     .footer h6 a:hover {
-      color: #d6d6d6; }
+      color: #cccccc; }
 /*# sourceMappingURL=main.css.map */
